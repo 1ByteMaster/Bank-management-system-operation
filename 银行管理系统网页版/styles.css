@@ -1,0 +1,1081 @@
+/* 基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 头部样式 */
+header {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, #1976d2, #2196f3);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 导航按钮样式 */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.nav-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2196f3;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #1976d2;
+    transform: translateY(-2px);
+}
+
+/* 模块样式 */
+.module {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.module h2 {
+    color: #1976d2;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* 功能按钮样式 */
+.function-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.function-buttons button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+    background-color: white;
+    color: #2196f3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.function-buttons button:hover {
+    background-color: #2196f3;
+    color: white;
+}
+
+/* 内容区域样式 */
+.content-area {
+    min-height: 200px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+/* 排队系统特殊样式 */
+.queue-display {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.vip-queue,
+.normal-queue {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.queue-display h3 {
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+    }
+
+    .function-buttons {
+        flex-direction: column;
+    }
+
+    .queue-display {
+        flex-direction: column;
+    }
+}
+
+/* 网点相关样式 */
+.branch-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.branch-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.branch-card h3 {
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+.search-form,
+.route-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-form input,
+.route-form select {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.route-info {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.route-info h3 {
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: #d32f2f;
+    padding: 10px;
+    background-color: #ffebee;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.no-results {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+.branch-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+/* 添加校园地点卡片样式 */
+.spot-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.spot-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-tabs button {
+    padding: 8px 16px;
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+    background-color: white;
+    color: #2196f3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.search-tabs button:hover,
+.search-tabs button.active {
+    background-color: #2196f3;
+    color: white;
+}
+
+.search-form-container {
+    margin-bottom: 20px;
+}
+
+/* 修改下拉框样式 */
+.spot-select {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.spot-select:focus {
+    outline: none;
+    border-color: #2196f3;
+}
+
+/* 显示更多按钮样式 */
+.show-more-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.show-more-btn {
+    padding: 8px 24px;
+    font-size: 14px;
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+    background-color: white;
+    color: #2196f3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.show-more-btn:hover {
+    background-color: #2196f3;
+    color: white;
+}
+
+/* 优化网格布局 */
+.spot-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+/* 相邻地点信息样式 */
+.spot-card p {
+    margin: 8px 0;
+    line-height: 1.5;
+}
+
+/* 网格布局样式 */
+.spot-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 每行4个网点 */
+    gap: 15px;
+    padding: 10px;
+}
+
+.spot-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+    height: 100%;
+    /* 确保所有卡片高度一致 */
+}
+
+.spot-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.spot-card h3 {
+    color: #1976d2;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.spot-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* 响应式布局 */
+@media (max-width: 1200px) {
+    .spot-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 屏幕变小时每行3个 */
+    }
+}
+
+@media (max-width: 900px) {
+    .spot-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 更小屏幕每行2个 */
+    }
+}
+
+@media (max-width: 600px) {
+    .spot-grid {
+        grid-template-columns: 1fr;
+        /* 手机屏幕每行1个 */
+    }
+}
+
+/* 服务计时器样式 */
+.timer {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* 当前服务状态样式 */
+.current-service {
+    background-color: #e3f2fd;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.current-service button {
+    margin-top: 5px;
+    padding: 4px 12px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 评分对话框样式 */
+.rating-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 10px;
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.star {
+    color: #ddd;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.star.active,
+.star:hover {
+    color: #ffd700;
+    transform: scale(1.2);
+}
+
+/* 服务统计卡片样式 */
+.stats-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stats-card h4 {
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+.stats-card p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* 添加服务记录样式 */
+.history-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-record {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.service-record:last-child {
+    border-bottom: none;
+}
+
+.service-record span {
+    color: #666;
+}
+
+/* 添加服务统计样式 */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.stats-item {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.stats-item h5 {
+    color: #1976d2;
+    margin-bottom: 10px;
+}
+
+.rating-distribution {
+    margin-top: 20px;
+}
+
+.rating-bars {
+    margin-top: 10px;
+}
+
+.rating-bar-item {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.rating-label {
+    width: 50px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.rating-bar {
+    flex: 1;
+    background-color: #e0e0e0;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.rating-bar-fill {
+    background-color: #2196f3;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    font-size: 12px;
+    transition: width 0.3s ease;
+}
+
+/* 修改按钮样式 */
+.function-buttons button {
+    margin: 5px;
+    padding: 8px 16px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.function-buttons button:hover {
+    background-color: #1976d2;
+}
+
+/* 添加卡片头部样式 */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* 收起按钮样式 */
+.collapse-btn {
+    padding: 4px 12px;
+    font-size: 12px;
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+    background-color: white;
+    color: #2196f3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.collapse-btn:hover {
+    background-color: #2196f3;
+    color: white;
+}
+
+/* 内容区域过渡动画 */
+#stats-content,
+#history-content {
+    transition: all 0.3s ease;
+}
+
+/* 服务记录卡片样式优化 */
+.history-card {
+    margin-top: 20px;
+}
+
+.service-record {
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    margin-bottom: 8px;
+}
+
+.service-record:hover {
+    background-color: #e3f2fd;
+}
+
+/* 服务提示框样式 */
+.service-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.alert-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+.alert-content h4 {
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+.alert-content p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.alert-content button {
+    padding: 8px 24px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.alert-content button:hover {
+    background-color: #1976d2;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* 添加展开/收起按钮样式 */
+.toggle-spots-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+    background-color: white;
+    color: #2196f3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-spots-btn:hover {
+    background-color: #2196f3;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 职员表格样式 */
+.staff-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.staff-table th,
+.staff-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.staff-table th {
+    background-color: #f5f5f5;
+    color: #1976d2;
+    font-weight: bold;
+}
+
+.staff-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* 职员表单样式 */
+.staff-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.staff-form input,
+.staff-form select {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.staff-form button {
+    padding: 12px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.staff-form button:hover {
+    background-color: #1976d2;
+}
+
+/* 地图容器和控制按钮布局 */
+.branch-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.branch-map {
+    flex: 1;
+    height: 500px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+
+.map-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#campus-map {
+    position: absolute;
+    cursor: move;
+    max-width: none;
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+}
+
+/* 地图控制按钮样式 */
+.map-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.map-controls button {
+    width: 70px;
+    padding: 8px 0;
+    font-size: 14px;
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+    background-color: white;
+    color: #2196f3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.map-controls button:hover {
+    background-color: #2196f3;
+    color: white;
+}
+
+/* 地图切换按钮样式 */
+.toggle-map-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+    background-color: white;
+    color: #2196f3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.toggle-map-btn:hover {
+    background-color: #2196f3;
+    color: white;
+}
+
+/* 修改地图容器样式 */
+.branch-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+/* 客户管理系统表单样式 */
+.account-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    /* 增加表单最大宽度 */
+    margin: 0 auto;
+}
+
+.account-form input,
+.account-form select {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    /* 使输入框占满容器宽度 */
+}
+
+.transaction-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    /* 增加表单最大宽度 */
+    margin: 0 auto;
+}
+
+.transaction-form input,
+.transaction-form select {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    /* 使输入框占满容器宽度 */
+}
+
+/* 搜索表单样式 */
+.search-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    /* 增加表单最大宽度 */
+    margin: 0 auto 20px;
+}
+
+.search-form input,
+.search-form select {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    flex: 1;
+    /* 使输入框占据剩余空间 */
+}
+
+/* 通用按钮样式 */
+button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+    background-color: white;
+    color: #2196f3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #2196f3;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 特殊按钮样式（如需要特别样式的按钮以覆盖） */
+.nav-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    background-color: #2196f3;
+    color: white;
+}
+
+.nav-btn:hover {
+    background-color: #1976d2;
+    transform: translateY(-2px);
+}
+
+/* 功能按钮样式 */
+.function-buttons button {
+    margin: 5px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+}
+
+.function-buttons button:hover {
+    background-color: #1976d2;
+}
+
+/* 表单提交按钮样式 */
+form button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+form button[type="submit"]:hover {
+    background-color: #1976d2;
+}
+
+/* 排序控制样式 */
+.sort-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.sort-controls select {
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    flex: 1;
+    /* 使选择框占据更多空间 */
+    min-width: 200px;
+    /* 设置最小宽度 */
+    width: 400px;
+    /* 设置固定宽度 */
+}
+
+.sort-controls button {
+    padding: 12px 24px;
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.sort-controls button:hover {
+    background-color: #1976d2;
+}
+
+/* 客户信息表格样式 */
+.accounts-table {
+    width: 90%;
+    /* 设置表格宽度 */
+    margin: 20px auto;
+    /* 居中显示 */
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.accounts-table th,
+.accounts-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #e0e0e0;
+    /* 添加单元格边框 */
+}
+
+.accounts-table th {
+    background-color: #f5f5f5;
+    color: #1976d2;
+    font-weight: bold;
+    border-bottom: 2px solid #2196f3;
+    /* 表头底部边框 */
+}
+
+.accounts-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* 表格容器样式 */
+.search-results,
+.sort-results {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    margin-top: 20px;
+    overflow-x: auto;
+    /* 允许横向滚动 */
+}
+
+/* 无结果提示样式 */
+.no-results {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    margin: 20px auto;
+    width: 90%;
+}
+
+/* 日期选择区间样式 */
+.date-range {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.date-range label {
+    color: #666;
+    white-space: nowrap;
+}
+
+.date-range input[type="date"] {
+    padding: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+    flex: 1;
+}
+
+.date-range span {
+    color: #666;
+}
+
+/* 利息计算结果样式 */
+.interest-info {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.interest-info h3 {
+    color: #1976d2;
+    margin-bottom: 15px;
+}
+
+.interest-info p {
+    margin: 10px 0;
+    color: #666;
+}
+
+.toggle-password-btn {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 2px 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+.toggle-password-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.password-text,
+.real-password {
+    display: inline-block;
+    vertical-align: middle;
+}

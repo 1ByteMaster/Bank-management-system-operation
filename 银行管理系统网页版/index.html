@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>银行管理系统</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1019/1019607.png" type="image/png">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>银行管理系统</h1>
+        </header>
+
+        <nav class="main-nav">
+            <button class="nav-btn" onclick="showModule('staff')">职员管理</button>
+            <button class="nav-btn" onclick="showModule('customer')">客户管理</button>
+            <button class="nav-btn" onclick="showModule('queue')">排队管理</button>
+            <button class="nav-btn" onclick="showModule('branch')">网点查询</button>
+        </nav>
+
+        <!-- 职员管理模块 -->
+        <div id="staff-module" class="module">
+            <h2>职员管理系统</h2>
+            <div class="function-buttons">
+                <button onclick="staffFunction('query')">查询职员信息</button>
+                <button onclick="staffFunction('add')">入职</button>
+                <button onclick="staffFunction('delete')">离职</button>
+                <button onclick="staffFunction('modify')">修改职员信息</button>
+                <button onclick="staffFunction('display')">显示所有职员信息</button>
+            </div>
+            <div id="staff-content" class="content-area"></div>
+        </div>
+
+        <!-- 客户管理模块 -->
+        <div id="customer-module" class="module">
+            <h2>客户管理系统</h2>
+            <div class="function-buttons">
+                <button onclick="customerFunction('query')">查询账户信息</button>
+                <button onclick="customerFunction('open')">开户</button>
+                <button onclick="customerFunction('close')">销户</button>
+                <button onclick="customerFunction('modify')">修改密码</button>
+                <button onclick="customerFunction('sort')">账户排序</button>
+                <button onclick="customerFunction('deposit')">存款</button>
+                <button onclick="customerFunction('withdraw')">取款</button>
+                <button onclick="customerFunction('transfer')">转账</button>
+                <button onclick="customerFunction('interest')">计算利息</button>
+            </div>
+            <div id="customer-content" class="content-area"></div>
+        </div>
+
+        <!-- 排队管理模块 -->
+        <div id="queue-module" class="module">
+            <h2>排队管理系统</h2>
+            <div class="function-buttons">
+                <button onclick="queueFunction('vip-new')">VIP取号</button>
+                <button onclick="queueFunction('normal-new')">普通取号</button>
+                <button onclick="queueFunction('vip-next')">VIP叫号</button>
+                <button onclick="queueFunction('normal-next')">普通叫号</button>
+                <button onclick="showServiceStats()">查看服务统计</button>
+            </div>
+            <div class="queue-display">
+                <div class="vip-queue">
+                    <h3>VIP队列</h3>
+                    <div id="vip-numbers"></div>
+                </div>
+                <div class="normal-queue">
+                    <h3>普通队列</h3>
+                    <div id="normal-numbers"></div>
+                </div>
+            </div>
+            <div id="service-stats"></div>
+            <div id="service-history"></div>
+        </div>
+
+        <!-- 网点查询模块 -->
+        <div id="branch-module" class="module">
+            <h2>网点查询系统</h2>
+            <button id="toggle-map-btn" onclick="toggleMap()" class="toggle-map-btn">收起地图</button>
+            <div class="branch-container" id="map-container">
+                <div class="branch-map">
+                    <div class="map-container">
+                        <img id="campus-map" src="Images/燕山校区地图.jpg" alt="燕山校区地图" draggable="false">
+                    </div>
+                </div>
+                <div class="map-controls">
+                    <button onclick="zoomIn()">放大</button>
+                    <button onclick="zoomOut()">缩小</button>
+                    <button onclick="resetMap()">重置</button>
+                </div>
+            </div>
+            <div class="function-buttons">
+                <button onclick="branchFunction('search')">查询网点</button>
+                <button onclick="branchFunction('route')">路线规划</button>
+                <button onclick="branchFunction('info')">网点信息</button>
+            </div>
+            <div id="branch-content" class="content-area"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
